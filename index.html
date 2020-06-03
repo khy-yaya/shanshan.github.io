@@ -2,126 +2,41 @@
 <html lang="zh-cn">
 <head>
     <meta charset="UTF-8">
-    <title>personal resume</title>
+    <title>To 姗姗</title>
     <script>
-        document.write('<link rel="stylesheet" type="text/css" href="webs/css/resume.css?v=' + Math.random() + '">');
+        document.write('<link rel="stylesheet" type="text/css" href="webs/css/shanshan.css?v=' + Math.random() + '">');
+        let photosDom = document.getElementById('photos');
+        //获取图片数组
+        let images = photosDom.getElementsByTagName('img');	
+        //获取图片数量
+        let len = images.length;		
+        //计算每张图片按Y轴旋转的角度 
+        let deg = Math.floor(360 / len); 					
+        for(let i = 0; i < len;i++){
+            images[i].style = 'transform : rotateY(' + deg * i + 'deg) translateZ(350px)'; //deg前面不要加空格
+            if(i == 1){
+                images[i].style = 'transform : rotateY(' + deg * i + 'deg) translateZ(350px)';
+            }
+        }
+        let x = 0;
+        setInterval(function(){
+            photosDom.style.transform = "rotateX(-10deg) rotateY("+ (x++) * 0.2 +"deg)";
+        },10);
     </script>
+    <script type="text/javascript" src="webs/js/jquery-3.1.1.min.js"></script>
 
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>个人简历</h1>
-        </div>
-        <div class="resume-information">
-            <table>
-                <colgroup>
-                    <col width="150px" />
-                    <col width="200px" />
-                    <col width="100px" />
-                    <col width="270px" />
-                    <col width="" />
-                </colgroup>
-                <tr>
-                    <th>姓<span style="display:inline-block;width:1em;"></span>名</th>
-                    <td>林诗雅</td>
-                    <th>手<span style="display:inline-block;width:2em;"></span>机</th>
-                    <td>182 1134 8544</td>
-                    <td style="vertical-align:top" rowspan="99"><img src="webs/img/sy01.jpg" alt="sy" /></td>
-                </tr>
-                <tr>
-                    <th>年<span style="display:inline-block;width:1em;"></span>龄</th>
-                    <td>21</td>
-                    <th>邮<span style="display:inline-block;width:2em;"></span>箱</th>
-                    <td>1714977322@qq.com</td>
-                </tr>
-                <tr>
-                    <th>所在地</th>
-                    <td>深圳市</td>
-                    <th>求职意向</th>
-                    <td>前端工程师</td>
-                </tr>
-            </table>
-        </div>
-        <div class="resume-box self-introduce">
-            <p>本人热爱编程、敬业乐业、尽职尽责，对上级安排心悦诚服，对工作执行严格认真，喜欢以效率和结果为导向，并且为人虚心好学、积极进取、适应能力强、抗压能力高，希望能成为贵公司的一员，为公司效力!</p>
-        </div>
-        <div class="resume-box skill">
-            <h3><span>前端技术</span></h3>
-            <ul>
-                <li>
-                    <em>HTML</em>
-                    <span class="percent"><i style="width:100%;"></i></span>
-                </li>
-                <li>
-                    <em>CSS</em>
-                    <span class="percent"><i style="width:100%;"></i></span>
-                </li>
-                <li>
-                    <em>Javascript</em>
-                    <span class="percent"><i style="width:70%;"></i></span>
-                </li>
-                <li>
-                    <em>jQuery</em>
-                    <span class="percent"><i style="width:85%;"></i></span>
-                </li>
-                <li>
-                    <em>Photoshop</em>
-                    <span class="percent"><i style="width:50%;"></i></span>
-                </li>
-            </ul>
-        </div>
-        <div class="resume-box skill-explain">
-            <h3><span>技能说明</span></h3>
-            <ul>
-                <li>具备扎实的HTML、CSS、Javascript前端技术基础，能独立、快速完成各类网页视觉与交互功能。</li>
-                <li>非常熟悉jQuery、Bootstrap等前端框架使用与及scss、less开发，能自行编写各类UI组件与jQuery插件。</li>
-                <li>具有大量各类网站各种页面的实战经验，了解响应式布局、移动页面自适应。</li>
-                <li>具备良好的编码规范与模块化编程习惯，熟悉sublime text3编辑器，熟悉git、svn版本管理。</li>
-                <li>具有良好的沟通协作能力和学习能力，熟悉使用团队协作开发工具，懂得如何与设计师、后端进行配合交互开发。</li>
-            </ul>
-        </div>
-        <div class="resume-box work-experience">
-            <h3><span>工作经验</span></h3>
-            <h4>
-                <span class="title-time">2016.8至今</span>
-                <span>深圳快活猿互联网服务有限公司</span>
-                <span>前端工程师</span>
-            </h4>
-            <h5>主要参与的项目：</h5>
-            <dl>
-                <dt>* 分享购物网</dt>
-                <dd>基于淘宝网的分享购物类网站，以社区发表文章推广的方式介绍商品和推荐商品，通过分享链接获得优惠、积分和返利。</dd>
-                <dd>我主要负责热推商品、产品列表和详情等页面，当中编写了「分类弹出菜单」「弹出层」「放大镜」等功能插件。</dd>
-            </dl>
-            <dl>
-                <dt>* 在线教育网</dt>
-                <dd>基于开源在线教育平台进行的二次开发，主要功能有课程列表、课程管理、课程详情、课程分类、评论区等，所有页面都需要根据新的UI全部重新编写。</dd>
-                <dd>我主要负责首页轮播广告、课程展示、分类、用户评论等模块，其中运用到的技术有「AJAX交互」「拖拽布局」等，我重写了「瀑布流」「banner轮播」插件。</dd>
-            </dl>
-            <dl>
-                <dt>* 招聘网站</dt>
-                <dd>类似于"拉勾网"、"猎聘网"的招聘类网站，主要功能包括了首页的特性介绍、工作职位的列表与详情、社区、公司信息、个人信息展示等。</dd>
-                <dd>我在这项目中主要负责首页特性介绍、用户登录页、工作职位搜索结果页与及简历模板。因为每天都需要根据设计师的UI设计，进行编写不同界面的简历模板，积累了大量的CSS布局编写经验。</dd>
-            </dl>
-            <dl>
-                <dt>* 游戏网站</dt>
-                <dd>类似于“新浪网游排行榜”网站，该项目是为一家游戏代理公司开发的系统，主要功能有游戏列表、游戏排行榜、游戏介绍、游戏论坛、游戏攻略等。</dd>
-                <dd>我主要负责游戏首页、游戏列表、游戏介绍等模块的前端页面编写。通过该项目我加强了对PS切图、图标使用等技术的运用，我还使用jQuery编写了「标签自动完成」「搜索处理」等小插件。</dd>
-            </dl>
-            <dl>
-                <dt>* 企业网站</dt>
-                <dd>这类项目初期做得最多，页面也相对简单，大多数是公司的首页介绍、资讯展示、产品展示、招聘、合作等页面。</dd>
-                <dd>我主要根据设计提供的UI进行切图和编写各类静态页面，较常用到的功能有「大图轮播」「弹出层」「折叠菜单」「选项卡切换」。</dd>
-            </dl>
-        </div>
-        <div class="resume-box education">
-            <h3><span>教育背景</span></h3>
-            <h4>
-                <span class="title-time">2013.9-2016.7</span>
-                <span>长坡中学</span>
-                <span>高中</span>
-            </h4>
+        <div id="photos">
+            <img src="webs/img/shanshan1.jpeg">
+            <img src="webs/img/shanshan2.jpeg">
+            <img src="webs/img/shanshan3.jpeg">
+            <img src="webs/img/shanshan4.jpeg">
+            <img src="webs/img/shanshan5.jpeg">
+            <img src="webs/img/shanshan6.jpeg">
+            <img src="webs/img/shanshan7.jpeg">
+            <div></div>
         </div>
     </div>
 </body>
