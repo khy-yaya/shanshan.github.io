@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  font-family: "PingFang SC", STHeiti, "Microsoft Yahei", sans-serif; }
+
+* li {
+  list-style: none; }
+
+.container {
+  margin: 80px auto;
+  padding-bottom: 30px;
+  width: 968px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5); }
+
+.header {
+  padding: 30px 0;
+  text-align: center;
+  background: #e5e5e5; }
+
+.resume-information {
+  margin-top: 30px; }
+  .resume-information table {
+    width: 100%; }
+  .resume-information img {
+    max-width: 130px;
+    height: auto; }
+
+.resume-box {
+  padding: 0 20px;
+  margin: 35px 0;
+  color: #646464; }
+  .resume-box h3 {
+    background: #e5e5e5; }
+    .resume-box h3 span {
+      color: #fff;
+      display: inline-block;
+      background: #646464;
+      line-height: 40px;
+      padding: 0 10px; }
+  .resume-box p {
+    margin-top: 30px;
+    margin-bottom: 20px; }
+  .resume-box h4 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    display: flex;
+    width: 100%; }
+    .resume-box h4 span {
+      width: 300px; }
+    .resume-box h4 .title-time {
+      width: 200px; }
+
+.skill-explain ul {
+  margin-top: 20px; }
+  .skill-explain ul li {
+    position: relative;
+    padding-left: 18px;
+    line-height: 35px;
+    list-style: none; }
+    .skill-explain ul li:before {
+      position: absolute;
+      top: 15px;
+      left: 0;
+      display: inline-block;
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 100%;
+      background: #e4e4e4; }
+
+.skill ul {
+  margin: 20px 0; }
+  .skill ul li {
+    display: flex;
+    margin: 5px 0;
+    line-height: 35px; }
+    .skill ul li:before {
+      width: 0;
+      height: 0; }
+  .skill ul em {
+    flex: 0 0 13%;
+    font-style: normal;
+    font-size: 16px; }
+.skill .percent {
+  display: inline-block;
+  position: relative;
+  top: 14px;
+  width: 100%;
+  height: 10px;
+  background: #f2f2f2;
+  border-radius: 5px; }
+  .skill .percent i {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 10px;
+    border-radius: 5px;
+    z-index: 4;
+    background: #ccc; }
+
+.self-introduce {
+  line-height: 35px;
+  text-indent: 2em; }
+
+.self-introduce,
+.skill-explain {
+  font-size: 15px; }
+
+.work-experience h5 {
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: normal; }
+.work-experience dl {
+  margin-top: 13px;
+  line-height: 28px; }
+  .work-experience dl dd {
+    text-indent: 2em;
+    font-size: 15px; }
+  .work-experience dl dt {
+    font-weight: bold; }
+
+.education h4 {
+  margin-top: 15px; }
+
+@media print {
+  body {
+    font-family: "Microsoft Yahei", sans-serif; }
+
+  .container {
+    width: 100%;
+    margin: 0;
+    box-shadow: none; }
+
+  .header {
+    padding: 10px 0; } }
+
+/*# sourceMappingURL=resume.css.map */
